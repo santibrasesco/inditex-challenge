@@ -1,0 +1,23 @@
+.image {
+    height: 268px;
+    max-width: unset;
+}
+
+.titleContainer {
+    height: 44px;
+}
+
+.titleContainer h4 {
+    margin: 5px 0 5px 0;
+    font-weight: bold;
+}
+
+.date {
+    margin-bottom: 0;
+}
+
+.infoContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}

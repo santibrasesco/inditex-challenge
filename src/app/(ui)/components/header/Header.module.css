@@ -1,0 +1,21 @@
+.headerContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 5% 16px 5%;
+    gap: 100px;
+    background: black;
+    color: white;
+    border-bottom: 1px solid #b7b7b73b;
+}
+
+.contentFav {
+    display: inline-flex;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.headerContainer > svg {
+    cursor: pointer;
+}

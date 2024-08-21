@@ -1,0 +1,53 @@
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  --marvel-red: #EC1D24;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto Condensed';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.layout-container {
+  width: 90%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  background-color: #ffffff;
+}
+
+input {
+  width: 100%;
+  padding: 10px 0;
+  margin: 10px 0 10px 0;
+  font-size: 18px;
+  border: none;
+  border-bottom: 1px solid #bdbdbd;
+  outline: none;
+  background-color: transparent;
+}
+
+input:focus {
+  border-bottom: 1px solid #007bff;
+}
+
+h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: bold;
+}

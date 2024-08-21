@@ -1,0 +1,35 @@
+.container {
+    padding: 0 5% 0 5%;
+}
+
+.comicsContainer {
+    display: flex;
+    overflow-x: auto;
+    width: 100%;
+    gap: 20px;
+    height: 380px;
+}
+
+.container > h2 {
+    margin: 15px 0;
+}
+
+.comicsContainer::-webkit-scrollbar {
+    height: 8px;
+}
+
+.comicsContainer:hover::-webkit-scrollbar {
+    opacity: 1;
+}
+
+.comicsContainer::-webkit-scrollbar-thumb {
+    background-color: var(--marvel-red);
+    border-radius: 5px;
+}
+
+@media screen and (min-width: 1025px) {
+    .container {
+        padding: 0 20% 0 20%;
+    }
+
+}
