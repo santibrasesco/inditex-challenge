@@ -5,6 +5,7 @@ import styles from "./CharacterCard.module.css";
 import { Character } from "@/app/core/entities/Character";
 import { ToggleFavoriteCharacter } from "./ToggleFavoriteCharacter";
 import { useCharacterState } from "../../context/CharacterContext";
+import Image from "next/image";
 
 export const CharacterCard = ({ character }: { character: Character }) => {
     const [isHovered, setIsHovered] = useState(false);
@@ -24,7 +25,7 @@ export const CharacterCard = ({ character }: { character: Character }) => {
         <div className={styles.container}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}>
-            <img src={character.urlImage} className={styles.image} alt={`Character image ${character.name}`}></img>
+            <Image width={268} height={268} src={character.urlImage} className={styles.image} alt={`Character image ${character.name}`} />
 
             <div className={styles.details}>
                 <div className={`${styles.contentDetails}`}>

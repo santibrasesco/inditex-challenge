@@ -7,6 +7,15 @@ const nextConfig = {
       permanent: true,
     },
   ],
+  images: {
+    remotePatterns: [
+      {
+        protocol: "http",
+        hostname: "i.annihil.us",
+        port: "",
+      },
+    ],
+  },
 };
 
 export default nextConfig;
