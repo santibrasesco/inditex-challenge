@@ -1,4 +1,4 @@
-{
+export const comicsMock = {
     "code": 200,
     "status": "Ok",
     "copyright": "© 2024 MARVEL",

@@ -1,23 +1,17 @@
-import { promises as fs } from 'fs';
 import { Character } from "../core/entities/Character";
 import { Comic } from "../core/entities/Comic";
 import { CharacterRepository } from "../ports/CharacterRepository";
-import { ApiClient } from "./http/ApiClient";
+import { comicsMock } from '../fixtures/comicsMock';
+import { charactersMock } from '../fixtures/charactersMock';
 
 export class ApiCharacterClientMock implements CharacterRepository {
-    private apiClient;
-    constructor() {
-        this.apiClient = new ApiClient();
+
+    private getCharactersData = async (): Promise<any[]> => {
+        return Promise.resolve(charactersMock.data.results);
     }
 
-    private getCharactersData = async (): Promise<Character[]> => {
-        const file = await fs.readFile(process.cwd() + '/src/app/fixtures/charactersData.json', 'utf8');
-        return JSON.parse(file).data.results;
-    }
-
-    private getComicsData = async (): Promise<Character[]> => {
-        const file = await fs.readFile(process.cwd() + '/src/app/fixtures/comicsData.json', 'utf8');
-        return JSON.parse(file).data.results;
+    private getComicsData = async (): Promise<any[]> => {
+        return Promise.resolve(comicsMock.data.results);
     }
 
     async getCharacters(filter?: string): Promise<Character[]> {
