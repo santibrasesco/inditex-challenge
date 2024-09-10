@@ -2,8 +2,7 @@ import { fireEvent, render, screen, waitFor } from "@testing-library/react"
 import { CharacterFilterSearch } from "../(ui)/components/characters/CharacterFilterSearch"
 import { usePathname, useRouter } from "next/navigation";
 import { useCharacterDispatch, useCharacterState } from "../(ui)/context/CharacterContext";
-import { Dispatch } from "react";
-import { Action, initialState, State } from "../(ui)/context/types";
+import { initialState } from "../(ui)/context/types";
 import { setFilterSearch } from "../(ui)/context/characterActions";
 
 jest.mock("../(ui)/context/CharacterContext");

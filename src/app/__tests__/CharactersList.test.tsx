@@ -1,4 +1,4 @@
-import { act, fireEvent, render, screen } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import { CharactersList } from "../(ui)/components/characters/CharactersList"
 import { Character } from "../core/entities/Character"
 import { useCharacterState } from "../(ui)/context/CharacterContext";
@@ -20,10 +20,10 @@ describe('CharactersList', () => {
         (useRouter as jest.Mock).mockReturnValue({ push: mockPush });
 
         characters = [
-            new Character(1, 'name 1', 'desc 1', { path: 'path 1', extension: 'ext' }, false),
-            new Character(2, 'name 2', 'desc 2', { path: 'path 2', extension: 'ext' }, false),
-            new Character(3, 'name 3', 'desc 3', { path: 'path 3', extension: 'ext' }, false),
-            new Character(4, 'name 4', 'desc 4', { path: 'path 4', extension: 'ext' }, false)
+            new Character(1, 'name 1', 'desc 1', { path: 'http://path1', extension: 'ext' }, false),
+            new Character(2, 'name 2', 'desc 2', { path: 'http://path2', extension: 'ext' }, false),
+            new Character(3, 'name 3', 'desc 3', { path: 'http://path3', extension: 'ext' }, false),
+            new Character(4, 'name 4', 'desc 4', { path: 'http://path4', extension: 'ext' }, false)
         ];
     })
 
