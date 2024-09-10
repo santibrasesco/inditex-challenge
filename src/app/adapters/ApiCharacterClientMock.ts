@@ -23,7 +23,7 @@ export class ApiCharacterClientMock implements CharacterRepository {
 
     }
     async getCharacter(id: number): Promise<Character> {
-        const character = (await this.getCharactersData())[0];
+        const character = (await this.getCharactersData()).find(c => c?.id === +id);
         return new Character(character.id, character.name, character.description, character.thumbnail, false);
     }
 
